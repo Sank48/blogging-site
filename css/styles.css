@@ -1,0 +1,21 @@
+.jumbotron{
+	height: 800px;
+	/*background: #1b1b1b;*/
+	background-image: url("../img/wallpaper.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	color: floralwhite;
+}
+#headerText{
+	padding: 120px 300px;
+}
+.navbar{
+	background: #1b1b1b;
+}
+.navbar-toggler{
+	background: #1b1b1b;
+}
+#Navbar{
+	background: #1b1b1b;
+	color: floralwhite
+}

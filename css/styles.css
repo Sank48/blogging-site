@@ -60,3 +60,6 @@ transform: scale(1.1);
 a{
 	color: #663271;
 }
+.fontAwesome{
+	font-family: 'Helvetica', FontAwesome, sans-serif;
+}

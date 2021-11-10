@@ -4,10 +4,13 @@
 	background-image: url("../img/wallpaper.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+	margin: 0px auto;
+	padding: 300px 30px;
 	color: floralwhite;
 }
 #headerText{
-	padding: 120px 300px;
+	/*padding: 120px 300px;*/
+	text-align: center;
 }
 .navbar{
 	background: #1b1b1b;
@@ -18,4 +21,42 @@
 #Navbar{
 	background: #1b1b1b;
 	color: floralwhite
+}
+#loginModal{
+	background: #1b1b1b;
+}
+.card {
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 1.5em;
+  }
+.card:hover {
+transform: scale(1.1);
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+#body-mid{
+	background-image: url("../img/body-back.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	color: floralwhite;
+}
+.card{
+	background: #1b1b1b;
+	color: floralwhite;
+	align-self: center;
+}
+.footer{
+	background: #918E85;
+	color: floralwhite;
+	margin: 0px auto;
+	padding: 20px 70px;
+}
+a{
+	color: #663271;
 }

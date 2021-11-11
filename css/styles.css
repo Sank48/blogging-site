@@ -41,9 +41,10 @@ transform: scale(1.1);
     object-fit: cover;
 }
 #body-mid{
-	background-image: url("../img/body-back.jpg");
+	/*background-image: url("../img/body-back.jpg");
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
+	background: #2f4f4f;
 	color: floralwhite;
 }
 .card{
@@ -62,4 +63,7 @@ a{
 }
 .fontAwesome{
 	font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+#vision-text{
+	padding-top: 150px;
 }

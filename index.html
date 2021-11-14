@@ -37,15 +37,12 @@
                 <a>
                     <span class="fa fa-sign-in"></span> Sign up
                 </a>
-            </span> -->
+            </span> --> 
 		</div>
 		<span class="navbar-text">
-                <a>
-                    <span class="fa fa-user-o"></span> Sign up
-                    <span class="fa fa-sign-in"></span> Login
-                </a>
-                
-            </span>
+            <a class="signup"><span class="fa fa-user-o"></span> Sign up</a>
+            <a class="login"><span class="fa fa-sign-in"></span> Login</a>                
+        </span>
 	</nav>
 
 	<div id="loginModal" class="modal fade" role="dialog">
@@ -66,7 +63,7 @@
 						</div>
 						<div class="form-group col-sm-9">
 					        <label class="sr-only" for="exampleInputPassword">Password</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail" 
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
 					        placeholder="&#xf023;   Password">
 					    </div>
 					    <div class="col-sm-auto">
@@ -79,6 +76,52 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary">Login</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="signupModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="close">
+                        &times;
+                    </button>
+                </div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group col-sm-9">
+							<label class="sr-only" for="name">Full Name</label>
+					        <input type="email" class="form-control form-control-sm mr-1" id="name" 
+					        placeholder="Full Name">
+						</div>
+						<div class="form-group col-sm-9">
+							<label class="sr-only" for="uname">Username</label>
+					        <input type="email" class="form-control form-control-sm mr-1" id="uname" 
+					        placeholder="Username">
+						</div>
+						<div class="form-group col-sm-9">
+							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
+					        placeholder="&#xf2bd;  abc@xyz.com">
+						</div>
+						<div class="form-group col-sm-9">
+					        <label class="sr-only" for="exampleInputPassword">Password</label>
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
+					        placeholder="&#xf023;   Password">
+					    </div>
+					    <div class="form-group col-sm-9">
+					        <label class="sr-only" for="exampleInputPassword">Confirm Password</label>
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
+					        placeholder="&#xf023;   Confirm Password">
+					    </div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Sign up</button>
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>

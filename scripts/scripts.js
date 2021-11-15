@@ -10,3 +10,13 @@ $(document).ready(function () {
 		$('#signupModal').modal('hide');
 	});
 })
+
+function validate() {
+	var p1 = document.getElementById("Password");
+	var p2 = document.getElementById("CPassword");
+	if(p1.value!=p2.value){
+		alert("Password didn't match!!");
+		return false;
+	}else return true;
+	
+}

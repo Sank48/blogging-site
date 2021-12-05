@@ -11,7 +11,7 @@ const staticPath = path.join(__dirname,"../");
 //   res.send('index.html');
 // });
 app.use(express.static(staticPath));
-console.log(staticPath);
+// console.log(staticPath);
 
 app.get('/',(req,res)=>{
   res.sendFile(root)

@@ -22,12 +22,12 @@
 	background: #1b1b1b;
 	color: floralwhite
 }
-.navbar-text{
+/*.navbar-text{
 	display: inline-block;
 	position: absolute;
   top: 0px;
   right: 15px;
-}
+}*/
 #card {
     transition: transform 0.2s ease;
     box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);

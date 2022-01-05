@@ -10,6 +10,13 @@ const staticPath = path.join(__dirname,"../");
 //   res.statusCode = 200;
 //   res.send('index.html');
 // });
+
+const logger=(req,res,next)=>{
+  console.log(req.method,req.path, '-', req.ip );
+  next();
+}
+app.use(logger);
+
 app.use(express.static(staticPath));
 // console.log(staticPath);
 

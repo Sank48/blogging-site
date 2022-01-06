@@ -62,15 +62,15 @@
                     </button>
                 </div>
 				<div class="modal-body">
-					<form>
+					<form action="/signin" method="post">
 						<div class="form-group col-sm-9">
 							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
+					        <input type="email" name="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
 					        placeholder="&#xf2bd;  abc@xyz.com">
 						</div>
 						<div class="form-group col-sm-9">
 					        <label class="sr-only" for="exampleInputPassword">Password</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
+					        <input type="password" name="password" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
 					        placeholder="&#xf023;   Password">
 					    </div>
 					    <div class="col-sm-auto">
@@ -79,11 +79,12 @@
 					            <label class="form-check-label"> Remember me</label>
 					        </div>
 					    </div>
+					
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary" value="Submit">Login</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Login</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -99,37 +100,38 @@
                     </button>
                 </div>
 				<div class="modal-body">
-					<form>
+					<form action="signup" method="post">
 						<div class="form-group col-sm-9">
 							<label class="sr-only" for="name">Full Name</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="name" 
+					        <input type="name" name="fullname" class="form-control form-control-sm mr-1" id="name" 
 					        placeholder="Full Name">
 						</div>
 						<div class="form-group col-sm-9">
 							<label class="sr-only" for="uname">Username</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="uname" 
+					        <input type="name" name="username" class="form-control form-control-sm mr-1" id="uname" 
 					        placeholder="Username">
 						</div>
 						<div class="form-group col-sm-9">
 							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
+					        <input type="email" name="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
 					        placeholder="&#xf2bd;  abc@xyz.com">
 						</div>
 						<div class="form-group col-sm-9">
 					        <label class="sr-only" for="exampleInputPassword">Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" id="Password" 
+					        <input type="password" name="passwords" class="form-control form-control-sm mr-1 fontAwesome" id="Password" 
 					        placeholder="&#xf023;   Password">
 					    </div>
 					    <div class="form-group col-sm-9">
-					        <label class="sr-only" for="exampleInputPassword">Confirm Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" onblur="validate()" id="CPassword" 
+					        <label class="sr-only" for="exampleInputPassword" name="Cpasswords">Confirm Password</label>
+					        <input type="password" name="Cpasswords" class="form-control form-control-sm mr-1 fontAwesome" onblur="validate()" id="CPassword" 
 					        placeholder="&#xf023;   Confirm Password">
 					    </div>
+					
+						<div class="modal-footer">
+							<button type="submit" value="Submit" class="btn btn-primary">Sign up</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Sign up</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>

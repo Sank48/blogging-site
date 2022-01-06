@@ -88,37 +88,29 @@
                     </button>
                 </div>
 				<div class="modal-body">
-					<form>
-						<div class="form-group col-sm-9">
-							<label class="sr-only" for="name">Full Name</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="name" 
-					        placeholder="Full Name">
-						</div>
-						<div class="form-group col-sm-9">
-							<label class="sr-only" for="uname">Username</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="uname" 
-					        placeholder="Username">
-						</div>
+					<form action="/signin" method="post">
 						<div class="form-group col-sm-9">
 							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
+					        <input type="email" name="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
 					        placeholder="&#xf2bd;  abc@xyz.com">
 						</div>
 						<div class="form-group col-sm-9">
 					        <label class="sr-only" for="exampleInputPassword">Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" id="Password" 
+					        <input type="password" name="password" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
 					        placeholder="&#xf023;   Password">
 					    </div>
-					    <div class="form-group col-sm-9">
-					        <label class="sr-only" for="exampleInputPassword">Confirm Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" onblur="validate()" id="CPassword" 
-					        placeholder="&#xf023;   Confirm Password">
+					    <div class="col-sm-auto">
+					        <div class="form-check">
+					            <input class="form-check-input" type="checkbox">
+					            <label class="form-check-label"> Remember me</label>
+					        </div>
 					    </div>
+					
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary" value="Submit">Login</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Sign up</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>

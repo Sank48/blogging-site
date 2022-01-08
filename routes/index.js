@@ -3,6 +3,7 @@ const app = express()
 const http = require('http');
 const path = require('path');
 const bodyParser = require('body-parser');
+const connectDB = require('./database')
 
 const host = "localhost";
 const port = "3000";
@@ -17,7 +18,7 @@ const logger=(req,res,next)=>{
   next();
 }
 
-
+connectDB()
 // a logger to log method, path and ip
 app.use(logger);
 app.use(express.static(staticPath));

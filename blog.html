@@ -125,9 +125,9 @@
 		</div>
 	</div>
 	<div class="col-12 col-md-9" id="vision-text">
-			<form>
+			<form action="/blog/new" method="post">
 				<div class="form-group row">
-		            <label for="name" class="col-md-2 col-form-label">Write Title of Blog</label>
+		            <label for="title" class="col-md-2 col-form-label">Write Title of Blog</label>
 		            <div class="col-md-10">
 		                <!-- <input type="text" name="name" class="form-control" id="name" placeholder="Blog Title"> -->
 		                <textarea type="title" name="title" rows="4" cols="50"></textarea>
@@ -140,14 +140,14 @@
 		            </div>
 		        </div> -->
 				<div class="form-group row">
-		            <label for="feedback" class="col-md-2 col-form-label">Your Blog Content</label><br>
+		            <label for="blog" class="col-md-2 col-form-label">Your Blog Content</label><br>
 		            <div class="col-md-10">
-		                <textarea type="email" name="feedback" class="form-control" id="feedback" rows="20"></textarea>
+		                <textarea type="blog" name="content" class="form-control" id="feedback" rows="20"></textarea>
 		            </div>
 		        </div>
 		        <div class="form-group row">
 		            <div class="offset-md-2 col-md-10">
-		                <button type="submit" class="btn btn-primary">
+		                <button type="submit" value="Submit" class="btn btn-primary">
 		                    Publish
 		                </button>
 		            </div>

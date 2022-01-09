@@ -60,6 +60,10 @@ transform: scale(1.1);
 	color: floralwhite;
 	margin: 0px auto;
 	padding: 20px 70px;
+	position: relative;
+	min-height: 50vh;
+	flex-direction: auto;
+	margin-top: auto;
 }
 a{
 	color: #663271;
@@ -72,4 +76,7 @@ a{
 }
 h1{
 	font-size: 70px;
+}
+textarea{
+	resize: both;
 }

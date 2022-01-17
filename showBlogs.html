@@ -10,23 +10,22 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-	<title>Contact Us</title>
+	<title>About Us</title>
 </head>
 <body>
-	<nav class="navbar navbar-dark fixed-top">	
+		<nav class="navbar navbar-dark fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="index.html"><img src="img/logo1.png" class="img-fluid" height="auto" max-width="100%"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                         <li class="nav-item"><a class="nav-link" href="./blog.html"><span class="fa fa-list fa-lg"></span> Write Blog</a></li>
-						<li class="nav-item"><a class="nav-link" href="./showBlogs.html"><span class="fa fa-list fa-lg"></span> Display Blog</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./showBlogs.html"><span class="fa fa-list fa-lg"></span> Display Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>  
                 <span class="navbar-text">
 		            <a class="signup"><span class="fa fa-user-o"></span> Sign up</a>
@@ -36,11 +35,10 @@
 		        	<a class="login"><span class="fa fa-sign-in"></span> Login</a>
 		        </span>
             </div>
-
             <!-- <span class="navbar-text">
-	            <a class="signup"><span class="fa fa-user-o"></span> Sign up</a>
-	            <a class="login"><span class="fa fa-sign-in"></span> Login</a>                
-	        </span> -->
+            <a class="signup"><span class="fa fa-user-o"></span> Sign up</a>
+            <a class="login"><span class="fa fa-sign-in"></span> Login</a>                
+        </span> -->
 		</div>
 	</nav>
 
@@ -49,6 +47,43 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close">
+                        &times;
+                    </button>
+                </div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group col-sm-9">
+							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
+					        placeholder="&#xf2bd;  abc@xyz.com">
+						</div>
+						<div class="form-group col-sm-9">
+					        <label class="sr-only" for="exampleInputPassword">Password</label>
+					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputPassword" 
+					        placeholder="&#xf023;   Password">
+					    </div>
+					    <div class="col-sm-auto">
+					        <div class="form-check">
+					            <input class="form-check-input" type="checkbox">
+					            <label class="form-check-label"> Remember me</label>
+					        </div>
+					    </div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Login</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="signupModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up</h4>
                     <button type="button" class="close">
                         &times;
                     </button>
@@ -81,131 +116,18 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="signupModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Sign Up</h4>
-                    <button type="button" class="close">
-                        &times;
-                    </button>
-                </div>
-				<div class="modal-body">
-					<form>
-						<div class="form-group col-sm-9">
-							<label class="sr-only" for="name">Full Name</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="name" 
-					        placeholder="Full Name">
-						</div>
-						<div class="form-group col-sm-9">
-							<label class="sr-only" for="uname">Username</label>
-					        <input type="email" class="form-control form-control-sm mr-1" id="uname" 
-					        placeholder="Username">
-						</div>
-						<div class="form-group col-sm-9">
-							<label class="sr-only" for="exampleInputEmail3">Email Address</label>
-					        <input type="email" class="form-control form-control-sm mr-1 fontAwesome" id="exampleInputEmail3" 
-					        placeholder="&#xf2bd;  abc@xyz.com">
-						</div>
-						<div class="form-group col-sm-9">
-					        <label class="sr-only" for="exampleInputPassword">Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" id="Password" 
-					        placeholder="&#xf023;   Password">
-					    </div>
-					    <div class="form-group col-sm-9">
-					        <label class="sr-only" for="exampleInputPassword">Confirm Password</label>
-					        <input type="password" class="form-control form-control-sm mr-1 fontAwesome" onblur="validate()" id="CPassword" 
-					        placeholder="&#xf023;   Confirm Password">
-					    </div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Sign up</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="container">
-		<div class="row row-header align-items-center">
-			<div class="col-12 align-self-center" id="vision-text">
-				<h1>We'd love to hear from you!!</h1>
-				<p>Whether you are curious about features, free trials, have any feedback or press.. We'd love to answer any question.</p><hr>
-			</div>
-		</div>
-		<div class="row row-header align-items-center">
-			<div class="col-12 align-self-center" id="options">
-				<div class="row row-content">
-					<div class=" col-lg-3 mb-5 mt-5">
-						<div class="card" style="width: 12rem; height: 8rem;" id="card">
-							<div class="card-body">
-								<h4><b>Contact a Specialist</b></h4>
-							</div>
-						</div>	
-					</div>
-					<div class=" col-lg-3 mb-5 mt-5">
-						<div class="card" style="width: 12rem; height: 8rem;" id="card">
-							<div class="card-body">
-								<h4><b>Get Support</b></h4>
-							</div>
-						</div>
-					</div>
-					<div class=" col-lg-3 mb-5 mt-5">
-						<div class="card" style="width: 12rem; height: 8rem;" id="card">
-							<div class="card-body">
-								<h4><b>Media Inqueries</b></h4>
-							</div>
-						</div>
-					</div>
-					<div class=" col-lg-3 mb-5 mt-5">
-						<div class="card" style="width: 13rem; height: 8rem;" id="card">
-							<div class="card-body">
-								<h4><b>Career Oppurtunities</b></h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-12 col-md-9">
-			<form>
-				<div class="form-group row">
-		            <label for="name" class="col-md-2 col-form-label">Enter Name</label>
-		            <div class="col-md-10">
-		                <input type="text" name="name" class="form-control" id="name" placeholder="Full Name">
-		            </div>
-		        </div>
-		        <div class="form-group row">
-		            <label for="email" class="col-md-2 col-form-label">Enter Email</label>
-		            <div class="col-md-10">
-		                <input type="text" name="email" class="form-control" id="email" placeholder="Email">
-		            </div>
-		        </div>
-				<div class="form-group row">
-		            <label for="feedback" class="col-md-2 col-form-label">Your Message</label>
-		            <div class="col-md-10">
-		                <textarea type="email" name="feedback" class="form-control" id="feedback" rows="12"></textarea>
-		            </div>
-		        </div>
-		        <div class="form-group row">
-		            <div class="offset-md-2 col-md-10">
-		                <button type="submit" class="btn btn-primary">
-		                    Send
-		                </button>
-		            </div>
-		        </div>
-			</form>
-		</div>
-	</div>
-	
-	
-	<div>
-		<div class="card">
-			<strong>You can also contact us directly via below given details.</strong>
-		</div>
-	</div>
+        <div class="row row-header align-items-center">
+			<div class="col-12" id="vision-text">
+				<h1>List of all Blogs!!<hr></h1>
+			</div>			
+        </div>
+		<br><br>
+		<form action="getBlogs">
+			<button value="Submit" >Display all Blogs</button>
+		</form>
+    </div>
+
 
 	<footer class="footer">
         <div class="container">

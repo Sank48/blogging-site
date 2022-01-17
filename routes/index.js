@@ -31,6 +31,13 @@ app.get('/',(req,res)=>{
   res.sendFile(root)
 })
 
+app.get('/getBlogs', async(req,res)=>{
+  const blog = await Blog.find();
+  res.status(201).json({
+    success: true,
+    blog
+  })
+})
 
 app.post('/signin',(req,res,next)=>{
   res.json({
@@ -59,8 +66,6 @@ app.post('/blog/new', async (req, res,next)=>{
   })
 })
 
-const server = http.createServer(app);
-
-server.listen(port, host, ()=>{
+http.createServer(app).listen(port, host, ()=>{
   console.log(`Server running at http://${host}:${port}`);
 });

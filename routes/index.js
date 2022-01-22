@@ -5,6 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const connectDB = require('./database')
 const Blog = require('./models/blog')
+const User = require('./models/user')
 
 const host = "localhost";
 const port = "3000";
@@ -46,15 +47,14 @@ app.post('/signin',(req,res,next)=>{
   });
   return
 })
-app.post('/signup',(req,res,next)=>{
-  res.json({
-    "Full name": req.body["fullname"],
-    "Username":req.body.username,
-    "Email": req.body["email"],
-    "Password":req.body.passwords,
-    "Confirm Password": req.body.Cpasswords
+app.post('/signup', async (req,res,next)=>{
+  const user = await User.create(req.body); 
+  // console.log(req.body);
+  res.status(201).json({
+    success: true,
+    user
   });
-  return
+  
 })
 app.post('/blog/new', async (req, res,next)=>{
   req.body.time = new Date().toString()

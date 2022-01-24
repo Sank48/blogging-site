@@ -3,6 +3,7 @@ const app = express()
 const http = require('http');
 const path = require('path');
 const bodyParser = require('body-parser');
+const logger = require('morgan')
 const connectDB = require('./database')
 const Blog = require('./models/blog')
 const User = require('./models/user')
@@ -15,14 +16,14 @@ const staticPath = path.join(__dirname,"../");
 //   res.send('index.html');
 // });
 
-const logger=(req,res,next)=>{
-  console.log(req.method,req.path, '-', req.ip );
-  next();
-}
+// const logger=(req,res,next)=>{   // Custom logger
+//   console.log(req.method,req.path, '-', req.ip );
+//   next();
+// }
 
 connectDB()
 // a logger to log method, path and ip
-app.use(logger);
+app.use(logger('dev'));  // can use other predefined formats like combined,common,dev,short,tiny
 app.use(express.static(staticPath));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())

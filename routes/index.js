@@ -7,6 +7,7 @@ const logger = require('morgan')
 const connectDB = require('./database')
 const Blog = require('./models/blog')
 const User = require('./models/user')
+var exec = require('child_process').exec;
 
 const host = "localhost";
 const port = "3000";
@@ -28,16 +29,35 @@ app.use(express.static(staticPath));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 // console.log(staticPath);
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 app.get('/',(req,res)=>{
   res.sendFile(root)
 })
 
 app.get('/getBlogs', async(req,res)=>{
-  const blog = await Blog.find();
-  res.status(201).json({
-    success: true,
-    blog
+  // const blog = await Blog.find({});
+  // console.log(blog.map(blogs=>blogs));
+  // for item in blog{
+  //   console.log()
+  // }
+  // blog.exec((err,data)=>{
+  //   if(err) throw err;
+  //   res.render('dispBlogs',{data: blog});
+  // })
+  // res.render('dispBlogs',{title:blog.title, content:blog.content});
+  // res.status(201).json({
+  //   success: true,
+  //   blog
+  // })
+  Blog.find((err, blog) => {
+    if(!err){
+      // console.log(blog[0].title);
+      res.render('dispBlogs',{data:blog})
+    }else{
+      console.log("Failed to retrive data.")
+    }
   })
 })
 

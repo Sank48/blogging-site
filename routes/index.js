@@ -81,10 +81,12 @@ app.post('/blog/new', async (req, res,next)=>{
   req.body.time = new Date().toString()
   const blog =  await Blog.create(req.body);
   // console.log(req.body)
-  res.status(201).json({
-    success: true,
-    blog
-  })
+  
+  res.render('success',{data:blog})
+  // res.status(201).json({
+  //   success: true,
+  //   blog
+  // })
 })
 
 http.createServer(app).listen(port, host, ()=>{

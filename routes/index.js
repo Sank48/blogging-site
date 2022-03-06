@@ -7,6 +7,7 @@ const logger = require('morgan')
 const connectDB = require('./database')
 const Blog = require('./models/blog')
 const User = require('./models/user')
+const auth = require('./route/auth')
 var exec = require('child_process').exec;
 
 const host = "localhost";
@@ -28,6 +29,7 @@ app.use(logger('dev'));  // can use other predefined formats like combined,commo
 app.use(express.static(staticPath));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use('/',auth)
 // console.log(staticPath);
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -68,15 +70,15 @@ app.post('/signin',(req,res,next)=>{
   });
   return
 })
-app.post('/signup', async (req,res,next)=>{
-  const user = await User.create(req.body); 
-  // console.log(req.body);
-  res.status(201).json({
-    success: true,
-    user
-  });
+// app.post('/signup', async (req,res,next)=>{
+//   const user = await User.create(req.body); 
+//   // console.log(req.body);
+//   res.status(201).json({
+//     success: true,
+//     user
+//   });
   
-})
+// })
 app.post('/blog/new', async (req, res,next)=>{
   req.body.time = new Date().toString()
   const blog =  await Blog.create(req.body);

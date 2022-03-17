@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
+// require('dotenv').config();
 
+// console.log(process.env.DB_URI)
+// const connectDatabase=()=>{
+// // 	mongoose.connect(process.env.DB_URI);
+// }
 const connectDatabase = ()=>{
-	mongoose.connect('mongodb+srv://blogmongo:blogmongo%4048@cluster0.syqoy.mongodb.net/blog?retryWrites=true&w=majority',{
+	mongoose.connect(process.env.DB_GLOBAL_URI,{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		family: 4

@@ -4,14 +4,20 @@ const http = require('http');
 const path = require('path');
 const bodyParser = require('body-parser');
 const logger = require('morgan')
-const connectDB = require('./database')
+const connectDB = require('./config/database')
+
 const Blog = require('./models/blog')
 const User = require('./models/user')
 const auth = require('./route/auth')
 var exec = require('child_process').exec;
 
-const host = "localhost";
-const port = "3000";
+const dotenv = require('dotenv');
+dotenv.config({
+  path: './routes/config/.env'
+})
+
+// const host = "localhost";
+// const port = "3000";
 const staticPath = path.join(__dirname,"../");
 // app.use((req, res, next) =>{
 //   res.statusCode = 200;
@@ -90,7 +96,7 @@ app.post('/blog/new', async (req, res,next)=>{
   //   blog
   // })
 })
-
-http.createServer(app).listen(port, host, ()=>{
-  console.log(`Server running at http://${host}:${port}`);
+// console.log('all envs: ',process.env);
+http.createServer(app).listen(process.env.PORT, process.env.HOST, ()=>{
+  console.log(`Server running at http://${process.env.HOST}:${process.env.PORT}`);
 });
